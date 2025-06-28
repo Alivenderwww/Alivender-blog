@@ -1,0 +1,120 @@
+/* 统一的蓝色背景 - 从全屏到页眉的过渡 */
+.unifiedBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 50%, #0050b3 100%);
+  z-index: 50;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 加载内容容器 */
+.loadingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 旋转加载器 */
+.spinner {
+  margin-bottom: 30px;
+}
+
+.spinnerRing {
+  width: 80px;
+  height: 80px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.spinnerRing::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+/* 加载文字 */
+.loadingText {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .loadingText {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .spinnerRing {
+    width: 60px;
+    height: 60px;
+    border-width: 4px;
+  }
+  
+  .spinnerRing::before {
+    border-width: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loadingText {
+    font-size: 14px;
+  }
+  
+  .spinnerRing {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+  }
+}

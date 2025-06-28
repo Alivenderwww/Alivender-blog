@@ -1,9 +1,12 @@
 .heading2Xl {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.05rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0 0 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .headingXl {
@@ -15,9 +18,12 @@
 }
 
 .headingLg {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.4;
-  margin: 1rem 0;
+  margin: 0.5rem 0 0 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .headingMd {
@@ -26,11 +32,19 @@
 }
 
 .borderCircle {
-  border-radius: 9999px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .colorInherit {
   color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.colorInherit:hover {
+  color: #40a9ff;
 }
 
 .padding1px {
