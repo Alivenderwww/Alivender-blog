@@ -124,17 +124,17 @@ export default function Layout({ children, home }) {
               </motion.div>
               {/* 绿色进度条动画箭头 */}
               <div className={styles.trainProgress}>
-                <svg className={styles.trainArrow} viewBox="0 0 100 100">
+                <svg className={styles.trainArrow} width="565" height="565" viewBox="0 0 100 100" style={{position:'absolute',top:0,left:0}}>
                   <polyline points="0,0 10,0 17,10 10,20.5 0,20.5 7,10" fill="#6BCBE925"/>
                 </svg>
               </div>
               <div className={styles.trainProgress}>
-                <svg className={styles.trainArrow} viewBox="0 0 100 100">
+                <svg className={styles.trainArrow} width="565" height="565" viewBox="0 0 100 100" style={{position:'absolute',top:0,left:0}}>
                   <polyline points="12,0 22,0 29,10 22,20.5 12,20.5 19,10" fill="#6BCBE925"/>
                 </svg>
               </div>
               <div className={styles.trainProgress}>
-                <svg className={styles.trainArrow} viewBox="0 0 100 100">
+                <svg className={styles.trainArrow} width="565" height="565" viewBox="0 0 100 100" style={{position:'absolute',top:0,left:0}}>
                   <polyline points="24,0 34,0 41,10 34,20.5 24,20.5 31,10" fill="#6BCBE925"/>
                 </svg>
               </div>
